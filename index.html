@@ -1,7 +1,39 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="서울대학교 첨단융합학부 정석진의 개인 홈페이지">
+  <title>정석진 | 개인 홈페이지</title>
+  <style>
+    :root { --ink:#172033; --muted:#5b687b; --line:#dfe5ed; --blue:#2463eb; --bg:#f5f7fb; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Pretendard,"Noto Sans KR","Malgun Gothic",sans-serif; line-height:1.7; }
+    .wrap { width:min(100% - 40px,920px); margin:auto; }
+    header { position:sticky; top:0; z-index:2; background:rgb(255 255 255 / 92%); border-bottom:1px solid var(--line); backdrop-filter:blur(10px); }
+    nav { min-height:64px; display:flex; align-items:center; justify-content:space-between; gap:20px; }
+    .brand, a { color:inherit; } .brand { font-weight:800; text-decoration:none; letter-spacing:-.03em; }
+    .links { display:flex; gap:18px; margin:0; padding:0; list-style:none; } .links a { color:var(--muted); font-size:.94rem; text-decoration:none; } .links a:hover { color:var(--blue); }
+    main { padding:80px 0 64px; } section { margin-top:72px; }
+    .hero { padding:clamp(32px,7vw,72px); color:#fff; border-radius:24px; background:linear-gradient(135deg,#173675,#2463eb 58%,#62a0ff); box-shadow:0 18px 45px rgb(23 54 117 / 22%); }
+    .eyebrow { margin:0 0 14px; font-size:.9rem; font-weight:700; letter-spacing:.1em; opacity:.8; } h1,h2 { line-height:1.25; letter-spacing:-.045em; } h1 { margin:0; font-size:clamp(2.4rem,8vw,4.8rem); } h2 { margin:0 0 10px; font-size:clamp(1.65rem,4vw,2.15rem); }
+    .hero p:last-child { max-width:580px; margin:22px 0 0; font-size:clamp(1.05rem,2.5vw,1.22rem); } .summary { margin:0 0 26px; color:var(--muted); }
+    .card { padding:clamp(24px,5vw,38px); background:#fff; border:1px solid var(--line); border-radius:18px; box-shadow:0 8px 20px rgb(29 44 76 / 5%); } .card p { margin:0; }
+    .interests { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; } .interest { min-height:155px; padding:24px; border-radius:14px; background:#f0f5ff; } .interest span { font-size:1.6rem; } .interest h3 { margin:12px 0 6px; font-size:1.05rem; } .interest p { margin:0; color:var(--muted); font-size:.93rem; }
+    .contact { display:flex; align-items:center; justify-content:space-between; gap:28px; } .button { flex:none; padding:12px 18px; border-radius:10px; color:#fff; background:var(--blue); font-weight:700; text-decoration:none; } .button:hover { background:#1749b7; }
+    footer { padding:28px 0 42px; color:var(--muted); font-size:.9rem; text-align:center; }
+    @media (max-width:640px) { .wrap { width:min(100% - 32px,920px); } nav { min-height:58px; } .links { gap:12px; } main { padding-top:40px; } section { margin-top:52px; } .hero { border-radius:18px; } .interests { grid-template-columns:1fr; } .contact { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
 <body>
-<h1>안녕하세요, 제 홈페이지입니다</h1>
-<p>GitHub Pages로 만들었습니다!</p>
+  <header><nav class="wrap" aria-label="주요 메뉴"><a class="brand" href="#top">정석진</a><ul class="links"><li><a href="#about">소개</a></li><li><a href="#interests">관심사</a></li><li><a href="#contact">연락처</a></li></ul></nav></header>
+  <main id="top" class="wrap">
+    <section class="hero" aria-labelledby="title"><p class="eyebrow">PERSONAL HOMEPAGE</p><h1 id="title">안녕하세요,<br>정석진입니다.</h1><p>서울대학교 첨단융합학부 26학번 정석진입니다. 새로운 기술을 배우고, 아이디어를 현실로 만드는 과정에 관심이 많습니다.</p></section>
+    <section id="about" aria-labelledby="about-title"><h2 id="about-title">소개</h2><p class="summary">배움을 즐기며 한 걸음씩 성장하고 있습니다.</p><div class="card"><p>서울대학교 첨단융합학부에서 공부하고 있습니다. 이곳은 제가 배우고, 만들고, 기록하는 내용을 차곡차곡 담아갈 개인 공간입니다.</p></div></section>
+    <section id="interests" aria-labelledby="interests-title"><h2 id="interests-title">관심사</h2><p class="summary">관심 있는 분야를 탐색하며 나만의 경험을 쌓아가고 있습니다.</p><div class="interests"><article class="interest"><span aria-hidden="true">💻</span><h3>기술과 코딩</h3><p>새로운 도구를 익히고 직접 만들어 보는 일</p></article><article class="interest"><span aria-hidden="true">💡</span><h3>문제 해결</h3><p>더 나은 방법을 찾고 아이디어를 실현하는 과정</p></article><article class="interest"><span aria-hidden="true">🌱</span><h3>배움과 성장</h3><p>관심 분야를 넓히고 경험을 나누는 일</p></article></div></section>
+    <section id="contact" aria-labelledby="contact-title"><h2 id="contact-title">연락처</h2><p class="summary">GitHub에서 제 프로젝트와 활동을 확인할 수 있습니다.</p><div class="card contact"><p>프로젝트에 관한 이야기나 의견이 있다면 GitHub를 통해 연락해 주세요.</p><a class="button" href="https://github.com/JeongSukjin" target="_blank" rel="noopener noreferrer">GitHub 방문하기</a></div></section>
+  </main>
+  <footer class="wrap">&copy; 2026 정석진. All rights reserved.</footer>
 </body>
 </html>
